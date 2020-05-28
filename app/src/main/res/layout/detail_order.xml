@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/hoa_don"
+                android:text="Hóa Đơn"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:layout_marginTop="15dp"
+                android:textColor="#F41B0B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/ma_order"
+                android:text="- Mã đơn hàng: "
+                android:layout_below="@id/hoa_don"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/ten_khach_hang"
+                android:text="- Tên khách hàng: "
+                android:layout_below="@id/ma_order"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/sdt"
+                android:text="- Số điện thoại: "
+                android:layout_below="@id/ten_khach_hang"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/ma_product"
+                android:text="- Mã sản phẩm: "
+                android:layout_below="@id/sdt"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/ten_product"
+                android:text="- Tên sản phẩm: "
+                android:layout_below="@id/ma_product"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/don_gia"
+                android:text="- Đơn giá: "
+                android:layout_below="@id/ten_product"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/so_luong"
+                android:text="- Số lượng: "
+                android:layout_below="@id/don_gia"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/gia"
+                android:text="- Thành tiền: "
+                android:layout_below="@id/so_luong"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/thu_tien"
+                android:layout_below="@id/gia"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="Đã thu tiền"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

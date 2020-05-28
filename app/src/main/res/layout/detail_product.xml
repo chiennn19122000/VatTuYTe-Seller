@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/text"
+                android:text="Thông tin sản phẩm"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:textColor="#4CAF50"
+                android:textSize="30sp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/show_product"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/text"
+                android:src="@drawable/home"
+                android:layout_marginTop="70dp"
+                android:layout_width="70pt"
+                android:layout_height="70pt"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_below="@id/show_product"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_below="@id/name"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_below="@id/price"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
