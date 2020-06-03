@@ -16,8 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.Detail.DetailOrder;
-import com.example.myapplication.Detail.DetailProduct;
-import com.example.myapplication.GetProduct.APIService;
+import com.example.myapplication.GetData.APIService;
 import com.example.myapplication.InformationOrder;
 import com.example.myapplication.R;
 import com.example.myapplication.Seller.Seller;
@@ -71,7 +70,7 @@ public class OrderProductFragment extends Fragment {
                     if (sellerList.get(i).getUsername().equals(preferences.getString("username","")))
                     {
                         placeSeller = sellerList.get(i).getPlace();
-
+                        break;
                     }
                     Log.d(TAG, "onResponse" + placeSeller);
                 }

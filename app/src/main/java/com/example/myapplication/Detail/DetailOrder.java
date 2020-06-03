@@ -1,5 +1,6 @@
 package com.example.myapplication.Detail;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.example.myapplication.BaseActivity;
 import com.example.myapplication.DataLogin;
@@ -70,7 +73,8 @@ public class DetailOrder extends BaseActivity {
 
     @Override
     protected void populateData() {
-        HideTitle();
+        callback();
+        setTitle("Hóa đơn");
         SetData();
     }
 
@@ -100,7 +104,25 @@ public class DetailOrder extends BaseActivity {
         thuTien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkPayment();
+                AlertDialog.Builder builder = new AlertDialog.Builder(DetailOrder.this);
+                builder.setTitle("Thông báo ");
+                builder.setIcon(R.mipmap.ic_launcher);
+                builder.setMessage("Bạn có chắc chắn đã bán sản phẩm ?");
+                builder.setPositiveButton("Xác nhận", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        checkPayment();
+                    }
+                });
+                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.show();
             }
         });
     }
@@ -116,7 +138,7 @@ public class DetailOrder extends BaseActivity {
 
                 Payment payment = response.body();
                 Log.d("Server Response",""+payment.getResponse());
-
+                startActivity(new Intent(DetailOrder.this,SystemActivity.class));
 
             }
 

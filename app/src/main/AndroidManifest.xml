@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                  android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +23,8 @@
         <activity android:name=".SystemActivity"/>
         <activity android:name=".Detail.DetailProduct"/>
         <activity android:name=".Detail.DetailOrder"/>
+        <activity android:name=".ChangeInfoActivity"/>
+        <activity android:name=".ChangePassActivity"/>
     </application>
 
 </manifest>

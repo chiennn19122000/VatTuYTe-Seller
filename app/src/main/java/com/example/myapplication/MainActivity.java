@@ -43,7 +43,7 @@ public class MainActivity extends BaseActivity{
 
     @Override
     protected void populateData() {
-
+        HideTitle();
     }
 
     private void Login()
@@ -75,9 +75,11 @@ public class MainActivity extends BaseActivity{
                     SharedPreferences preferences = getSharedPreferences("data_seller",MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("username",username);
+                    editor.putString("pass",password);
                     editor.commit();
+                    user.setText("");
+                    pass.setText("");
                     startActivity(new Intent(MainActivity.this,SystemActivity.class));
-                    Toast.makeText(MainActivity.this,"Successfully",Toast.LENGTH_SHORT).show();
 
                 }
                 else {

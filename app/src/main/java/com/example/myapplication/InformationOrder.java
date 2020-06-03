@@ -39,9 +39,9 @@ public class InformationOrder implements Serializable {
     private String name;
 
     @SerializedName("sdt")
-    private int sdt;
+    private String sdt;
 
-    public InformationOrder(int orderId, int productId, String username, int quantity, int pay, String place, String nameProduct, int priceProduct, String informationProduct, String imageProduct, String name, int sdt) {
+    public InformationOrder(int orderId, int productId, String username, int quantity, int pay, String place, String nameProduct, int priceProduct, String informationProduct, String imageProduct, String name, String sdt) {
         OrderId = orderId;
         ProductId = productId;
         Username = username;
@@ -144,11 +144,11 @@ public class InformationOrder implements Serializable {
         this.name = name;
     }
 
-    public int getSdt() {
+    public String getSdt() {
         return sdt;
     }
 
-    public void setSdt(int sdt) {
+    public void setSdt(String sdt) {
         this.sdt = sdt;
     }
 
@@ -157,5 +157,10 @@ public class InformationOrder implements Serializable {
         return "Mã đơn hàng: " + getOrderId() + "\n" +
                 "Tên khách hàng: " + getName() + "   " +"SĐT: " + getSdt() + "\n" +
                 "Tên SP: " + getNameProduct() + " x " + getQuantity() + "\n" ;
+    }
+    public String toStringAll() {
+        return "Mã đơn hàng: " + getOrderId() + "   Đã thanh toán: " + getPay() + " VNĐ\n" +
+                "Tên khách hàng: " + getName() + "   " + "SĐT: " + getSdt() + "\n" +
+                "Tên SP: " + getNameProduct() + " x " + getQuantity() + "\n";
     }
 }
