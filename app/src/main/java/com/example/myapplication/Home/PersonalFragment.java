@@ -100,6 +100,7 @@ public class PersonalFragment extends Fragment {
                 List<InfoSeller> infoSellers = response.body();
                 for (int i = 0; i<infoSellers.size() ; i++) {
                     if(infoSellers.get(i).getUsername().equals(preferences.getString("username","")))
+                    {
                         editor.putString("name",infoSellers.get(i).getName());
                         editor.putString("sdt",infoSellers.get(i).getSdt());
                         editor.putString("email",infoSellers.get(i).getEmail());
@@ -110,6 +111,7 @@ public class PersonalFragment extends Fragment {
                         email.setText("Email: "+infoSellers.get(i).getEmail());
                         place.setText("Địa chỉ: "+infoSellers.get(i).getPlace());
                         break;
+                    }
                 }
             }
 

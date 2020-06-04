@@ -57,6 +57,8 @@ public class ChangeInfoActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 sendData();
+                Toast.makeText(ChangeInfoActivity.this,"Thay đổi thành công",Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
@@ -101,6 +103,7 @@ public class ChangeInfoActivity extends BaseActivity {
                 InfoSeller infoSeller = response.body();
 
                 Log.d("Server Response",infoSeller.getResponse());
+
 
             }
 
