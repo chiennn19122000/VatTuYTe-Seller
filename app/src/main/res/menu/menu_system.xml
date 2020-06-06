@@ -6,7 +6,7 @@
         android:icon="@drawable/home"></item>
     <item
         android:id="@+id/product_sold"
-        android:title="Giỏ hàng"
+        android:title="Sẩn phẩm đã bán"
         android:icon="@drawable/basket"></item>
     <item
         android:id="@+id/order"
